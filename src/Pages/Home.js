@@ -11,6 +11,7 @@ import DownToUp from "../components/DownToUp";
 import SearchBar from "../components/SearchBar";
 import {useNavigate } from 'react-router-dom';
 import {url}  from "../App";
+console.log(url)
 
 export default function Home() {
 
