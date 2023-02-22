@@ -9,8 +9,8 @@ import FeaturedNews from "../components/FeaturedNews";
 import NewsSidebar from "../components/NewsSidebar";
 import DownToUp from "../components/DownToUp";
 import SearchBar from "../components/SearchBar";
-import {useNavigate } from 'react-router-dom'
-
+import {useNavigate } from 'react-router-dom';
+import {url}  from "../App";
 
 export default function Home() {
 
@@ -19,7 +19,7 @@ export default function Home() {
 
  
   const fetchPopular = async () => {
-    axios.get("/getAllNews").then((res) => {
+    axios.get(`${url}/getAllNews`).then((res) => {
       const data = res.data;
       console.log(data)
       const newnews = data;
