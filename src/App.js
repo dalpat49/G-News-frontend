@@ -21,8 +21,7 @@ import AdminSidebar from './components/AdminSidebar'
 import logo from "./Images/logo.png"
 
 
-export const url  = process.env.react_url;
-console.log(url)
+
 
 function App() {
   const navigate = useNavigate()
