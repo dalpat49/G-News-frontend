@@ -3,13 +3,14 @@ import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { Tooltip } from "react-tooltip";
+import { useNavigate } from "react-router-dom";
 
 export default function AdminAllNewsTable() {
   //all hooks
   const [showModal, setShowModal] = useState(false);
   const [newsCategory, setNewsCategory] = useState([]);
 //   for statuis buttons
-
+  const Navigate =useNavigate()
 
   const [user, setUser] = useState({
     title: "",
@@ -97,7 +98,7 @@ export default function AdminAllNewsTable() {
         if (success === true) {
           toast.success(msg);
 
-          window.location.reload();
+          Navigate("/admin/allNews")
         } else {
           alert("data not");
           // window.location.reload;
